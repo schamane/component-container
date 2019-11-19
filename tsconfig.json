@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "paths": { "*": ["types/*"] },
+    "incremental": true,
+    "tsBuildInfoFile": "./.buildcache/api.tsbuildinfo",
+    "module": "none",
+    "esModuleInterop": true,
+    "target": "es2020",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

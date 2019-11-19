@@ -1,0 +1,60 @@
+{
+  "name": "component-container",
+  "version": "1.0.0",
+  "keywords": [
+    "container",
+    "component",
+    "typescript"
+  ],
+  "license": "MIT",
+  "readmeFilename": "README",
+  "author": {
+    "name": "Nazar Kulyk",
+    "email": "spam@myeburg.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schamane/component-container.git"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "upgrade": "ncu -u && npm i",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --fix --ext .ts src",
+    "clean:build": "rimraf build",
+    "clean:build:cache": "rimraf build .buildcache",
+    "clean": "npm run -s clean:build && npm run -s clean:build:cache",
+    "test": "mocha -r source-map-support/register build/tests/**/*.spec.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "5.2.7",
+    "@types/chai": "4.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "npm-check-updates": "^3.2.1",
+    "prettier-eslint": "^9.0.1",
+    "rimraf": "^3.0.0",
+    "typescript": "3.7.2",
+    "source-map-support": "^0.5.16",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^13.0.0",
+    "npm": "^6.12.1"
+  }
+}

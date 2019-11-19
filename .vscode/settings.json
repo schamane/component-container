@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.implementationsCodeLens.enabled": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "build": true,
+    "node_modules": true
+  },
+  "search.exclude": {
+    "build": true,
+    "node_modules": true
+  },
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    { "language": "typescript", "autoFix": true }
+  ],
+  "eslint.enable": true,
+  "[json]": {
+    "editor.formatOnSave": true,
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+  },
+  "eslint.workingDirectories": [
+    {"directory": "src", "changeProcessCWD": true }
+  ]
+}
