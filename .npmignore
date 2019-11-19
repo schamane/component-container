@@ -7,3 +7,5 @@ build/tests
 .gitignore
 *.code-workspace
 tsconfig.json
+.buildcache
+*.tgz
