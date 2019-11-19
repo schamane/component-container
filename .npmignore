@@ -1,0 +1,9 @@
+node_modules
+.vscode
+src
+build/tests
+.eslintrc
+.editorconfig
+.gitignore
+*.code-workspace
+tsconfig.json
