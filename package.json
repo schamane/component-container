@@ -1,13 +1,13 @@
 {
   "name": "@schamane/component-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "container",
     "component",
     "typescript"
   ],
   "license": "MIT",
-  "readmeFilename": "README",
+  "readmeFilename": "README.md",
   "author": {
     "name": "Nazar Kulyk",
     "email": "spam@myeburg.net"
