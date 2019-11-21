@@ -4,7 +4,7 @@ export class TestString<T extends string = string> extends Component {
   protected prop: T;
 
   public constructor(item?: T) {
-    super(TestString);
+    super();
     this.prop = item || undefined;
   }
 

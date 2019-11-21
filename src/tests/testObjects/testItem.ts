@@ -11,7 +11,7 @@ export class TestItem<T extends TestItemType = TestItemType> extends Component {
   protected props: T;
 
   public constructor(item?: T) {
-    super(TestItem);
+    super();
     this.props = item || ({ name: undefined, order: 0 } as T);
   }
 
@@ -20,7 +20,7 @@ export class TestItem<T extends TestItemType = TestItemType> extends Component {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public get<T extends any = any>(key: keyof TestItemType): T {
+  public get<TValue extends any = any>(key: keyof TestItemType): TValue {
     return get(this.props, key, null);
   }
 
