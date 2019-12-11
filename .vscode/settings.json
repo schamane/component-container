@@ -22,8 +22,5 @@
   },
   "[html]": {
     "editor.formatOnSave": true,
-  },
-  "eslint.workingDirectories": [
-    {"directory": "src", "changeProcessCWD": true }
-  ]
+  }
 }
