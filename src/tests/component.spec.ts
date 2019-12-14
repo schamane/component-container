@@ -49,4 +49,10 @@ describe('Component', () => {
     const component = new TestComponent<NumberBaseType>(NumberBaseType);
     expect(component.getType()).to.be.equal('NumberBaseType');
   });
+
+  it('component should dispose', () => {
+    const component = new TestComponent<NumberBaseType>(NumberBaseType);
+    component.dispose();
+    expect(component.getType()).to.be.not.equal('NumberBaseType');
+  });
 });

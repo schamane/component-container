@@ -97,4 +97,13 @@ describe('Container with components', () => {
       .to.be.an('object')
       .with.property('prop');
   });
+
+  it('container with 3 items should dispose', () => {
+    const container = createContainer();
+    addSecondComponent(container);
+    addStringComponent(container);
+    container.dispose();
+    // eslint-disable-next-line no-unused-expressions
+    expect(container).to.be.an('object').that.is.empty;
+  });
 });

@@ -35,4 +35,12 @@ describe('Container', () => {
     cont.removeComponent(obj);
     expect(cont.getAllComponents()).to.be.an('array').that.is.empty;
   });
+
+  it('container should dispose', () => {
+    const cont = new Container();
+    const obj = {} as Component;
+    cont.addComponent(obj);
+    cont.dispose();
+    expect(cont).to.be.an('object').that.is.empty;
+  });
 });
