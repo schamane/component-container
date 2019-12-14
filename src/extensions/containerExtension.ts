@@ -24,4 +24,15 @@ export class ContainerExtension {
     this.components = this.components.filter((comp) => comp !== component);
     return (this as unknown) as Container;
   }
+
+  public clearComponents(): Container {
+    this.getAllComponents().forEach((component: Component): void => component.dispose && component.dispose());
+    this.components = [];
+    return (this as unknown) as Container;
+  }
+
+  public dispose(): void {
+    this.clearComponents();
+    delete this.components;
+  }
 }

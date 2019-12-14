@@ -13,6 +13,10 @@ export class Component<T extends any = any> {
   public getType(): string {
     return this._type || 'any';
   }
+
+  public dispose(): void {
+    delete this._type;
+  }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
