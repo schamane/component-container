@@ -1,5 +1,7 @@
 import { Component, Container } from '..';
 
+export type ComponentType<T extends Component> = new (...params: unknown[]) => T;
+
 export class ComponentExtension {
   protected container: Container;
 
@@ -7,11 +9,11 @@ export class ComponentExtension {
     return this.container.getAllComponents();
   }
 
-  protected getComponents<T extends Component>(typeT: new (...params: unknown[]) => T): T[] {
+  protected getComponents<T extends Component>(typeT: ComponentType<T>): T[] {
     return this.getAllComponents().filter((item) => item instanceof typeT) as T[];
   }
 
-  protected getComponent<T extends Component>(typeT: new (...params: unknown[]) => T): T {
+  protected getComponent<T extends Component>(typeT: ComponentType<T>): T {
     return this.getAllComponents().find((item) => item instanceof typeT) as T;
   }
 }
