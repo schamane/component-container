@@ -3,7 +3,7 @@ import { ComponentExtension } from './extensions';
 import { mixin } from './utils/mixin';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export class Component<T extends any = any> {
+export class Component<T = any> {
   private _type: string;
 
   public constructor(typeT?: new (...params: unknown[]) => T) {
@@ -20,6 +20,8 @@ export class Component<T extends any = any> {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface Component extends ComponentExtension {}
+export interface Component<T> extends ComponentExtension {
+  // empty
+}
 
 mixin(Component, [ComponentExtension]);
